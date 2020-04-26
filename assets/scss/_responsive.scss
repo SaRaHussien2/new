@@ -1,0 +1,28 @@
+/* Prefix Mixin
+ Auto Add Prefixes To Properties
+ */
+
+ @mixin prefixer ($property, $value, $prefixes :()) {
+     
+    @each $prefix in $prefixes {
+        #{'-'+ $prefix +'-' + $property }: $value;
+    }
+        #{$property} : $value;
+ }
+ /*
+ **End of prefixer
+ */
+
+$maxMobile: "(max-width:375px)";
+$maxMobile: "(max-width:767px)";
+$maxSmall:"(max-width:991px)";
+$minSmall:"(max-width:768px)";
+
+
+
+$minMobile: "(min-width:375px)";
+$maxMobile: "(max-width:375px)";
+
+$maxMobile: "(max-width:767px)";
+$maxSmall:"(max-width:991px)";
+$minSmall:"(max-width:768px)";
